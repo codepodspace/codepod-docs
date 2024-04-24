@@ -20,7 +20,7 @@ CodePod是一种基于VSCode和容器化技术的SaaS服务，用户只需使用
 
 > 开始
 
-    git clone https://github.com/codepodspace/docs.git
+    git clone https://github.com/codepodspace/codepod-docs.git
 
 > 安装
 
