@@ -1,2 +1,3 @@
 - [业务可观测专栏](blog/business_observable/)
-    - [业务需求](blog/business_observable/001/)
+    - [第01篇-业务流程的复杂场景介绍及分析](blog/business_observable/001/)
+    - [第02篇-工作流BPMN2.0来表达复杂的业务流程](blog/business_observable/002/)
