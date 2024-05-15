@@ -20,7 +20,7 @@ CodePod是一种基于VSCode和容器化技术的SaaS服务，用户只需使用
 
 > 开始
 
-    git clone https://github.com/codepodspace/docs.git
+    git clone https://github.com/codepodspace/codepod-docs.git
 
 > 安装
 
@@ -33,3 +33,13 @@ CodePod是一种基于VSCode和容器化技术的SaaS服务，用户只需使用
 > VSCode 插件
 
     drawio (插件标识：hediet.vscode-drawio)
+
+## 联系交流
+
+> 邮箱
+
+    codepod@126.com
+
+> 微信公众号
+
+![微信公众号](contact/wechat_qrcode.jpg)
