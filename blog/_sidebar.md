@@ -4,3 +4,4 @@
     - [第03篇-基于工作流的自动化作业方案设计](blog/business_observable/003/)
 - [技术随记](blog/notes/)
 	- [GraalVM](blog/notes/graalvm/)
+	- [容器技术](blog/notes/container/)
