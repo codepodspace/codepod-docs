@@ -143,10 +143,8 @@ const responseLink = new ApolloLink((operation, forward) => {
 		const responseHeaders = context.response.headers;
 		let token = responseHeaders.get('Authorization');
 		if (token) {
-			Session.set('CodePodToken', token);
-			Cookies.set('CodePodToken', token);
-			Cookies.set('CodeViewToken', token);
-			Cookies.set('CodeViewToken', token, { domain: '.codepod.space', path: '/' });
+			Session.set('Authorization', token);
+			Cookies.set('Authorization', token);
 		}
 		return response;
 	});
@@ -173,21 +171,22 @@ const client = new ApolloClient({
 provideApolloClient(client);
 
 const getToken = () => {
-	let value = Session.get('CodePodToken');
+	let value = Session.get('Authorization');
 	value = value ? value : '';
 	return value;
 };
 
 const getRefreshToken = () => {
-	let token = Session.get('CodePodToken');
+	let token = Session.get('Authorization');
 	let refreshToken = '';
 	if (token) {
 		//判断token是否过期，过期获取 refresh token
+		//不考虑前端设备修改时间的情况，后端也会进行校验
 		const payload: any = jwtDecode(token);
 		let exp = payload.exp;
 		let now = new Date().getTime() / 1000;
 		if (now - exp >= 0) {
-			refreshToken = Session.get('refreshToken');
+			refreshToken = Session.get('RefreshToken');
 		}
 	}
 	return refreshToken;
@@ -206,8 +205,6 @@ const getProjectId = () => {
 };
 
 export { useQuery, useMutation };
-
-
 
 ```
 
