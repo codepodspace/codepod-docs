@@ -42,3 +42,119 @@ Provides Reactive Relational Database Connectivity to persist data in SQL stores
 
 生成后自动下载项目zip包，完成！
 
+### 定义Schema
+
+	src/main/resources/schema/user.graphql
+
+```graphql
+
+type Query {
+  user: UserInfo
+}
+
+type UserInfo {
+  uuid: String
+  name: String
+  profile: String
+}
+
+```
+
+### 配置代码自动生成
+
+	pom.xml
+
+```xml
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.github.deweyjose</groupId>
+				<artifactId>graphqlcodegen-maven-plugin</artifactId>
+				<version>1.50</version>
+				<executions>
+					<execution>
+						<id>dgs-codegen</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<!--schema目录-->
+							<schemaPaths>
+								<param>src/main/resources/schema</param>
+							</schemaPaths>
+							<packageName>com.example.demo.schema</packageName>
+							<addGeneratedAnnotation>true</addGeneratedAnnotation>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-dgs-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+```
+
+执行Maven构建命令
+
+	mvn clean package
+
+在`target`目录下找到`generated-sources` 和`generated-examples`。
+
+拷贝目录下的生成的类到项目工程中。
+
+### 实现逻辑
+
+继续完成 `UserDatafetcher`的代码逻辑
+
+```java
+
+@DgsComponent
+public class UserDatafetcher {
+  @DgsData(
+      parentType = "Query",
+      field = "user"
+  )
+  public Mono<UserInfo> getUser(DataFetchingEnvironment dataFetchingEnvironment) {
+	//实现查询用户信息的逻辑，如查询数据库
+	UserInfo user = new UserInfo();
+    return Mono.just(user);
+  }
+}
+
+
+```
+
+### 调试代码
+
+使用`postman`工具，使用`graphql`接口请求，调试接口。
