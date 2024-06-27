@@ -6,3 +6,4 @@
 	- [CodePod](blog/notes/codepod/)
 	- [GraalVM](blog/notes/graalvm/)
 	- [容器技术](blog/notes/container/)
+	- [Linux](blog/notes/linux/)
