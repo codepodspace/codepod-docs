@@ -2,3 +2,4 @@
 - [镜像加载导入脚本](blog/notes/container/0002.镜像加载导入脚本/)
 - [使用环境变量减少部署修改](blog/notes/container/0003.使用环境变量减少部署修改/)
 - [常用服务Compose汇编](blog/notes/container/0004.常用服务Compose汇编/)
+- [镜像源收集](blog/notes/container/0005.镜像源收集/)
