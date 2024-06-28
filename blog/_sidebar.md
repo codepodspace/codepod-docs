@@ -5,6 +5,6 @@
 - [技术随记](blog/notes/)
 	- [📝docsify](blog/notes/docsify/)
 	- [📖CodePod](blog/notes/codepod/)
-	- [☕️GraalVM](blog/notes/graalvm/)
+	- [🛠️GraalVM](blog/notes/graalvm/)
 	- [🫙容器技术](blog/notes/container/)
 	- [💻Linux](blog/notes/linux/)
