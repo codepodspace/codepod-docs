@@ -6,5 +6,7 @@
 	- [📝docsify](blog/notes/docsify/)
 	- [📖CodePod](blog/notes/codepod/)
 	- [🛠️GraalVM](blog/notes/graalvm/)
-	- [🫙容器技术](blog/notes/container/)
+	- [🐳容器技术](blog/notes/container/)
 	- [💻Linux](blog/notes/linux/)
+	<!-- - [🌥 分布式技术](blog/notes/distributed/)
+		- [🌐 微服务](blog/notes/distributed/micro_service/) -->

@@ -162,23 +162,75 @@ version: '3'
 services:
   gitlab:
     image: 'gitlab/gitlab-ce:15.2.2-ce.0'
-#    image: 'gitlab/gitlab-ce:8.8.5-ce.1'
     privileged: true
     container_name: gitlab-ce
     restart: always
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://192.168.83.11:8929' #若有域名可以写域名
+        external_url 'http://192.168.1.2:8929' #若公网访问，填写公网IP或域名
         gitlab_rails['gitlab_shell_ssh_port'] = 10022
     ports:
       - '8929:8929'
       - '10022:22'
     volumes:
-      #将相关配置映射到当前目录下的config目录
       - './config:/etc/gitlab'
-      #将日志映射到当前目录下的logs目录
       - './logs:/var/log/gitlab'
-      #将数据映射到当前目录下的data目录
       - './data:/var/opt/gitlab'
 
+```
+
+## jenkins
+
+```yaml
+version: '3'
+services:
+  jenkins:
+    restart: always
+    user: root
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    volumes:
+      - ./data/:/var/jenkins_home
+      - ./war/:/usr/share/jenkins
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone/timezone:/etc/timezone:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+```
+
+## Media Wiki
+
+```yaml
+version: '3'
+services:
+  mediawiki:
+    image: mediawiki:1.37.1
+    restart: always
+    ports:
+      - 8080:80
+    links:
+      - database
+    volumes:
+      - ./mediawiki/html:/var/www/html
+    networks:
+      - devops
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: my_wiki
+      MYSQL_USER: wikiuser
+      MYSQL_PASSWORD: example
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    networks:
+      - devops
+networks:
+  devops:
+    external:
+      name: devops
 ```
