@@ -1,7 +1,7 @@
 
 根目录添加`Dockerfile`文件
 
-```yaml
+```dockerfile
 FROM node:latest
 LABEL description="A Demo Dockerfile for build Docsify."
 RUN npm install -g docsify-cli@latest

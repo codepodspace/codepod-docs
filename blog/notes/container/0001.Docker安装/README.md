@@ -5,7 +5,7 @@ docker安装部署，参考[Install Docker Engine on CentOS | Docker Docs](https
 
 CentOS 手动安装执行：
 
-```sh
+```bash
 
 #设置下载库的地址
 sudo yum install -y yum-utils
@@ -48,49 +48,49 @@ sudo rm -rf /var/lib/docker
 
 > 启动服务
 
-```sh
+```bash
 docker compose up -d
 ```
 
 > 查看服务运行状态
 
-```sh
+```bash
 docker ps
 ```
 
 > 查看服务运行日志
 
-```sh
+```bash
 docker logs --tail=1000 -f 【容器ID】
 ```
 
 或者
 
-```sh
+```bash
 docker compose logs【服务名】 -f
 ```
 
 > 重启全部服务
 
-```sh
+```bash
 docker compose restart
 ```
 
 > 重启某个服务
 
-```sh
+```bash
 docker compose restart 【服务名】
 ```
 
 > 修改 docker-compose.yaml，重新执行可生效
 
-```sh
+```bash
 docker compose up -d
 ```
 
 > 服务卸载
 
-```sh
+```bash
 docker compose down
 ```
 
@@ -98,18 +98,18 @@ docker compose down
 
 > Docker构建
 
-```sh
+```bash
 docker build --rm -f ./Dockerfile -t 【镜像名称】:【ver】 ./
 ```
 
 > 提交容器
-```sh
+```bash
 docker commit -a "" -m "" 【容器ID】 【镜像名称】:【ver】
 ```
 
 > Tag
 
-```sh
+```bash
 docker tag 【容器ID】 【镜像名称】:【version】
 
 #或
@@ -119,12 +119,12 @@ docker tag 【【镜像名称1】:【ver1】 【镜像名称2】:【ver2】
 
 > 保存容器到本地
 
-```sh
+```bash
 docker save -o 【文件名称】【镜像名称】:【ver】
 ```
 
 > 加载镜像文件
 
-```sh
+```bash
 docker load -i 【文件名称】
 ```

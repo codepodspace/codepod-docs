@@ -8,5 +8,5 @@
 	- [🛠️GraalVM](blog/notes/graalvm/)
 	- [🐳容器技术](blog/notes/container/)
 	- [💻Linux](blog/notes/linux/)
-	<!-- - [🌥 分布式技术](blog/notes/distributed/)
-		- [🌐 微服务](blog/notes/distributed/micro_service/) -->
+	- [🌥 分布式技术](blog/notes/distributed/)
+		- [🌐 网关技术](blog/notes/distributed/gateway/)

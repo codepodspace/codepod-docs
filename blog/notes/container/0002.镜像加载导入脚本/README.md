@@ -1,7 +1,7 @@
 
 ## 一键导出业务镜像
 
-```sh
+```bash
 #!/bin/bash
 
 mkdir -p ./images
@@ -30,7 +30,7 @@ docker save -o ./images/openjdk_8u342.tar openjdk:8u342-jdk
 
 ## 一键导入镜像
 
-```sh
+```bash
 
 #!/bin/bash
 

@@ -1,3 +1,8 @@
+- [⬅️返回上一层](blog/README.md)
 - 📖CodePod
-    - [01-前端框架及配置](blog/notes/codepod/0001/)
-    - [02-SpringBoot＋GraphQL＋WebFlux](blog/notes/codepod/0002/)
+    - 开发笔记
+        - [01-前端框架及配置](blog/notes/codepod/develop/0001/)
+        - [02-SpringBoot＋GraphQL＋WebFlux](blog/notes/codepod/develop/0002/)
+    - 运维笔记
+        - [01-腾讯云搭建环境记录](blog/notes/codepod/operation/0001/)
+        - [02-腾讯云主机的镜像恢复过程](blog/notes/codepod/operation/0002/)
