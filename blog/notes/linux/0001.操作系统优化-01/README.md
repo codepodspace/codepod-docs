@@ -1,6 +1,6 @@
 ## 调优脚本
 
-```sh
+```bash
 
 sudo sysctl -w vm.overcommit_memory=1
 sudo sysctl -w vm.drop_caches=1

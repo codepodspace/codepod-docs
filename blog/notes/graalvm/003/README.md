@@ -79,14 +79,14 @@ Ctrl + C 退出
 
 Windows
 
-```sh
+```bash
     cd target
     demo.exe
 ```
 
 Linux
 
-```sh
+```bash
     cd target
     chmod +x ./demo
     ./demo
