@@ -6,12 +6,14 @@
 
 根目录 pom.xml修改，确保整个工程的paren是springboot
 
+```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.0.7</version>
     <relativePath/>
 </parent>
+```
 
 demo 工程目录，pom.xml 文件修改：
 
@@ -42,7 +44,9 @@ demo 工程目录，pom.xml 文件修改：
 
 ### 1、清理工程
 
+```bash
     mvn clean install
+```
 
 ### 2、准备环境
 
@@ -68,7 +72,9 @@ Ctrl + C 退出
 
 ### 4、编译工程
 
+```bash
     mvn -Pnative native:compile
+```
 
 ## 编译结果
 

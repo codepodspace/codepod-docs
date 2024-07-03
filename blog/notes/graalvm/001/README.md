@@ -10,7 +10,9 @@ Java17：https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.
 
 ## 2. 配置环境变量
 
+```bash
     GRAALVM_HOME=D:\javaEnv\graalvm-ce-java17-22.3.1
+```
 
 ## 3. 安装Visual Studio Community 2022
 
@@ -53,7 +55,9 @@ Java17：https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.
 
 ## 5. 安装 Native Image
 
+```bash
     gu install native-image
+```
 
 参考地址：https://www.graalvm.org/latest/docs/getting-started/#native-image
 
@@ -83,7 +87,9 @@ Java17：https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.
 
 查看java环境，输入:
 
+```bash
     java -version
+```
 
 ![](./_media/11.png ':size=800')
 
