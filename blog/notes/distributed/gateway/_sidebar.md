@@ -1,3 +1,0 @@
-- [⬅️返回上一层](blog/README.md)
-- 🌐 网关技术
-    - [01.Kong 搭建及配置](blog/notes/distributed/gateway/0001/)
