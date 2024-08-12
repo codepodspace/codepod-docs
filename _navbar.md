@@ -2,5 +2,5 @@
 * [需求分析](/requirement/)
 * [领域设计](/domain/)
 * [架构设计](/architecure/)
-* [技术博客](/blog/)
+* [技术博客](https://blog.codepod.space)
 * [产品发布](https://codepod.space)
