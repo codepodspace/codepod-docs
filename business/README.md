@@ -6,7 +6,7 @@
 
 ## 关键需求
 
-1. 手上找到一台可以联网的智能设备，打开浏览器（Chrome、Edge），输入 [codepod.space](https://codepod.space)
+1. 手上找到一台可以联网的智能设备，打开浏览器（Chrome、Edge），输入 [workpod.cn](https://workpod.cn)
 2. 注册或登录自己的账户
 3. 创建一个自己的【工作空间】，选择一个开发环境模板（nodejs、java、dotnet ...），等待系统创建完毕
 4. 打开WebIDE，开始编写代码。
